@@ -29,7 +29,7 @@ export default function Home({blogsData , postCategories}) {
           </div>
           {/*blogs */}
           <div className='  md:col-span-9 grid grid-cols-6 gap-8 '>
-            <Postlist blogsData={blogsData}/>
+            <Postlist blogsData={blogsData.docs}/>
           </div>
         </div>
       </div>
@@ -41,9 +41,9 @@ export default function Home({blogsData , postCategories}) {
 export async function getServerSideProps (context) {
   const {query} = context;
   console.log(queryString.stringify(query));
-  const {data : result} =  await axios.get(`http://localhost:5000/api/posts?${queryString.stringify(query)}`);
+  const {data : result} =  await axios.get(`https://newnextback.herokuapp.com/api/posts?${queryString.stringify(query)}`);
   const {data} = result;
-  const {data : postCategories} = await axios.get("http://localhost:5000/api/post-category")
+  const {data : postCategories} = await axios.get("https://newnextback.herokuapp.com/api/post-category")
   return {
     props:{
       blogsData:data,

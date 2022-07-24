@@ -1,10 +1,11 @@
 import React from 'react';
-import { AnnotationIcon, HeartIcon, BookmarkIcon, ClockIcon} from "@heroicons/react/outline"
+import { ClockIcon} from "@heroicons/react/outline"
 import Link from 'next/link';
+import PostInteraction from './PostInteraction';
 const Postlist = ({blogsData}) => {
     console.log(blogsData);
     return (
-        blogsData.docs.map((blog , index) =>{
+        blogsData.map((blog , index) =>{
             return(
               <div key={index} className="col-span-6 md:col-span-3 lg:col-span-2 bg-white rounded-3xl p-2 flex flex-col max-h-[400px] sm:max-h-[370px]">
                 {/*cover image*/}
@@ -40,24 +41,7 @@ const Postlist = ({blogsData}) => {
                   </div>
                   {/*interaction*/}
                    <div className='flex items-center justify-between  mt-2 mb-2 ml-2 '>
-                      <div className='flex items-center justify-center gap-x-2'>
-                        <button className='flex items-center  p-0.5 bg-gray-300 rounded gap-x-1'>
-                        <AnnotationIcon className='w-4 h-4 mr-1 stroke-2 stroke-gray-500 '/>
-                        <span className='text-gray-500  font-medium leading-3  '>{blog.commentsCount}</span>
-                        </button>
-                        
-                        <button className='flex items-center  p-0.5 bg-red-200 rounded gap-x-1'>
-                        <HeartIcon className='w-4 h-4  stroke-2 stroke-red-500 '/>
-                        <span className='text-red-500  font-medium leading-3   '>{blog.likesCount}</span>
-                        </button>
-
-                        <button className='flex items-end p-0.5  bg-blue-200   rounded'>
-                        <BookmarkIcon className='w-4 h-4  stroke-2 stroke-blue-500    '/>
-                       
-                        </button>
-
-                        
-                      </div>
+                      <PostInteraction post={blog} isSmall/>
                       
                       <div className='flex items-center text-[10px]  text-gray-400 font-bold '>
                         <ClockIcon className='w-4 h-4 stroke-gray-400 mr-1'/>
