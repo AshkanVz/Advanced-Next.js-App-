@@ -5,3 +5,10 @@ const nextConfig = {
 }
 
 module.exports = nextConfig
+
+module.exports = {
+  // ... rest of the configuration.
+  experimental: {
+    outputStandalone: true,
+  },
+}

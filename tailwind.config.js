@@ -8,8 +8,25 @@ module.exports = {
   ],
   theme: {
     extend: {
+      keyframes : {
+        wave : {
+          'from' : {transform : 'scale(0)'},
+          'to' : {transform : 'scale(1)'},
+
+          
+        },
+        back : {
+          'from' : {transform : 'scale(1)'},
+          'to' : {transform : 'scale(0)'},
+        },
+      },
+
+      animation: {
+        'waving-hand': 'wave 0.5s linear ',
+        'backing-hand' : 'back 1s linear',
     },
   },
+},
   plugins: [
     require('@tailwindcss/aspect-ratio'),
     require('@tailwindcss/typography'),

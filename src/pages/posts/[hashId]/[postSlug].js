@@ -9,9 +9,15 @@ import PostInteraction from "@/components/posts/PostInteraction";
 import {MdContentCopy} from "react-icons/md";
 import Postlist from "@/components/posts/PostList";
 import PostComment from "@/components/posts/postComments";
+import Layout from "@/containers/Layout";
+import http from "src/services/httpServices";
+import { useAuth } from "@/context/AuthContext";
 
 const PostPage = ({ post }) => {
+  const {user} = useAuth();
+  console.log(post);
   return (
+    <Layout>
     <div className="bg-gray-100 p-1 ">
       <div className="md:max-w-screen-lg container mx-auto">
         <header className="flex flex-col md:flex-row gap-y-5 md:justify-between md:items-start mb-12 max-w-screen-lg mx-auto">
@@ -121,7 +127,7 @@ const PostPage = ({ post }) => {
                   key={index}
                   className="px-3 py-1 rounded-2xl bg-gray-200 hover:bg-gray-100 transition-all
                  cursor-pointer text-gray-600 text-sm mb-3 block">
-                  {tag}
+                 {tag}
                 </li>
               );
             })}
@@ -177,19 +183,23 @@ const PostPage = ({ post }) => {
           
         </section>
         {/*post comments */}
-        <PostComment post={post}/>
+        <PostComment post={post} postId={post._id} />
       </div>
     </div>
+    </Layout>
   );
 };
 
 export default PostPage;
 
 export async function getServerSideProps(ctx) {
-  const { query } = ctx;
+  const { query , req } = ctx;
   const {
     data: { data },
-  } = await axios.get(`http://localhost:5000/api/posts/${query.postSlug}`);
+  } = await http.get(`/posts/${query.postSlug}` , {withCredentials:true , 
+  headers: {
+    Cookie : req.headers.cookie || "" ,
+  }});
 
   return {
     props: {

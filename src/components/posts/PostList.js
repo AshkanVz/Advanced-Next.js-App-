@@ -6,8 +6,9 @@ const Postlist = ({blogsData}) => {
     console.log(blogsData);
     return (
         blogsData.map((blog , index) =>{
+          
             return(
-              <div key={index} className="col-span-6 md:col-span-3 lg:col-span-2 bg-white rounded-3xl p-2 flex flex-col max-h-[400px] sm:max-h-[370px]">
+              <div key={index} className="col-span-6 md:col-span-3  lg:col-span-2 bg-white rounded-3xl p-2 flex flex-col sm:max-h-[360px]   ">
                 {/*cover image*/}
                 
                 
@@ -20,7 +21,7 @@ const Postlist = ({blogsData}) => {
                 </div>
                 
                 {/*blog content*/}
-                <div className='bg-gray-100 rounded-2xl p-1 flex flex-col w-full justify-between flex-1'>
+                <div className='bg-gray-100 rounded-2xl p-1 flex flex-col w-full justify-between flex-1   '>
                    {/*header*/}
                    <Link href={`/posts/${blog.hashId}/${blog.slug}`}>
                     <a>
