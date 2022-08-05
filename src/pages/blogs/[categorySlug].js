@@ -47,7 +47,7 @@ export default function Home({blogsData , postCategories}) {
 export async function getServerSideProps (context) {
   const {query , req} = context;
   console.log(queryString.stringify(query));
-  const {data : result} =  await http.get(`/posts?${queryString.stringify(query)}` , {withCredentials:include , 
+  const {data : result} =  await http.get(`/posts?${queryString.stringify(query)}` , {withCredentials:true , 
   headers: {
     Cookie : req.headers.cookie || "" ,
   }});
