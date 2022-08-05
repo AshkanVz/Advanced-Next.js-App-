@@ -2,7 +2,10 @@ import axios from 'axios';
 
 const app = axios.create({
     baseURL : process.env.NEXT_PUBLIC_BASE_API_URL,
-    withCredentials:true ,
+    withCredentials:true , 
+  headers: {
+    Cookie : req.headers.cookie || "" ,
+  }
 })
 
 const http = {

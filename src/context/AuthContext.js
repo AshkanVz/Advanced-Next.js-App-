@@ -4,7 +4,7 @@ import {  toast } from 'react-toastify';
 import  Router  from "next/router";
 import { useReducerAsync } from "use-reducer-async";
 import http from "src/services/httpServices";
-
+import 'react-toastify/dist/ReactToastify.css';
 // context
 const AuthContext = createContext();
 const AuthContextDispather = createContext();
