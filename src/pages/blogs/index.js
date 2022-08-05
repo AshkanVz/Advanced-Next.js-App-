@@ -45,7 +45,7 @@ export async function getServerSideProps({ req, query }) {
   const { data: result } = await http.get(
     `/posts?${queryString.stringify(query)}`,
     {
-      withCredentials: true,
+      withCredentials: include,
       headers: {
         Cookie: req.headers.cookie || "",
       },

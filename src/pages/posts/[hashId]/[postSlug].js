@@ -196,7 +196,7 @@ export async function getServerSideProps(ctx) {
   const { query , req } = ctx;
   const {
     data: { data },
-  } = await http.get(`/posts/${query.postSlug}` , {withCredentials:true , 
+  } = await http.get(`/posts/${query.postSlug}` , {withCredentials: include , 
   headers: {
     Cookie : req.headers.cookie || "" ,
   }});
