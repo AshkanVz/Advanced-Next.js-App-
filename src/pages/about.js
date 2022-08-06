@@ -12,10 +12,10 @@ const about = () => {
         prose-p:text-base prose-p:leading-8 md:prose-p:text-lg md:prose-p:leading-10 prose-img:rounded-xl max-w-screen-md mx-auto">
             <h1 className="text-violet-600">About the project</h1>
             <p>
-            This project is a blog project. The user must be able to like
-                and bookmark the posts. The user must be able to post comments
-                and reply to other people's comments. The user can be
-                authenticated with  httpOnly cookies This project is made by Next.js and is SSR project.In this project , Tailwind was used for styling and it was worked with my post and MongoDB
+            This project is a blog project The user must be able to like
+                and bookmark the posts The user must be able to post comments
+                and reply to other peoples comments The user can be
+                authenticated with  httpOnly cookies This project is made by Next.js and is SSR project. In this project Tailwind was used for styling and it was worked with my post and MongoDB
             </p>
           </main>
         </div>
