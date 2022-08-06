@@ -69,12 +69,12 @@ dispatch({type : "SIGNOUT"})}  className="flex items-center justify-start gap-x-
                 </Link>
               </li>
               <li className="flex items-center  justify-center  gap-x-1">
-                <Link href="/contact">
+                <Link href="/about">
                   <a className="py-2 block font-semibold hover:text-violet-500">
-                    contact us
+                    About
                   </a>
                 </Link>
-                <ChevronDownIcon className="w-4 h-4 stroke-slate-500 mt-1" />
+                {/*<ChevronDownIcon className="w-4 h-4 stroke-slate-500 mt-1" />*/}
               </li>
             </ul>
             <div className="flex justify-center  gap-x-4">

@@ -15,15 +15,17 @@ module.exports = {
 
           
         },
-        back : {
-          'from' : {transform : 'scale(1)'},
-          'to' : {transform : 'scale(0)'},
-        },
+
+        back :{
+          'from' : {transform : 'translateY(100%)'},
+           'to' : {transform : 'translateY(0%)'},
+        }
+        
       },
 
       animation: {
         'waving-hand': 'wave 0.5s linear ',
-        'backing-hand' : 'back 1s linear',
+        'backing' : 'back 0.5s linear',
     },
   },
 },

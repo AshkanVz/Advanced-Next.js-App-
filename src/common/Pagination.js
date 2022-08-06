@@ -16,7 +16,7 @@ const PaginationComponent = ({page,totalPages}) => {
     );
   };
     return (
-        <div className=" col-span-6 flex justify-center">
+        <div className=" col-span-6 flex justify-center mb-6">
                {totalPages > 0 &&  (<Pagination
                     count={totalPages}
                     page={page}

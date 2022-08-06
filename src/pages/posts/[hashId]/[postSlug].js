@@ -18,7 +18,8 @@ const PostPage = ({ post }) => {
   console.log(post);
   return (
     <Layout>
-    <div className="bg-gray-100 p-1 ">
+      
+    <div className="bg-gray-100 p-1  ">
       <div className="md:max-w-screen-lg container mx-auto">
         <header className="flex flex-col md:flex-row gap-y-5 md:justify-between md:items-start mb-12 max-w-screen-lg mx-auto">
           {/* author data*/}

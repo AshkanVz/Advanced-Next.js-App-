@@ -49,6 +49,7 @@ const formik = useFormik({
 
     return (
        <Layout>
+           <div className='h-screen'>
            <Head>
               <title>Sign Up</title>
            </Head>
@@ -71,6 +72,7 @@ const formik = useFormik({
                    <p className='mt-4 py-4 cursor-pointer'>signin</p>
                    </Link>
                </form>
+           </div>
            </div>
        </Layout>
     );

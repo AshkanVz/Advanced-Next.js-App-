@@ -8,6 +8,7 @@ import Layout from "@/containers/Layout";
 import queryString from "query-string";
 import PaginationComponent from "src/common/Pagination";
 import http from "src/services/httpServices";
+import Mobilesort from "@/components/posts/Mobilesort";
 
 export default function Home({ blogsData, postCategories }) {
   
@@ -17,6 +18,9 @@ export default function Home({ blogsData, postCategories }) {
         <div className="container mx-auto lg:max-w-screen-xl px-4 md:px-0 ">
           <div className="flex md:hidden gap-x-4 overflow-auto pb-5 ">
             <MobileCategory postCategories={postCategories} />
+          </div>
+          <div className='flex md:hidden gap-x-4 overflow-auto pb-5 mt-2 '>
+          <Mobilesort/>
           </div>
           <div className="grid gap-4 md:grid-cols-12 md:grid-rows-[60px_minmax(300px,_1fr)] min-h-screen ">
             {/*desktop category */}

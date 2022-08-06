@@ -54,7 +54,7 @@ useEffect(() => {
 
     return (
        <Layout>
-          
+          <div className='h-screen'>
            <Head>
               <title>Sign Up</title>
            </Head>
@@ -74,6 +74,7 @@ useEffect(() => {
                    <p className='mt-4 py-4 cursor-pointer'>Have you not registered yet?  <span className='text-violet-700 font-bold'>sign up</span></p>
                    </Link>
                </form>
+           </div>
            </div>
        </Layout>
     );
