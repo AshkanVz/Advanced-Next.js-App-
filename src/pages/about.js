@@ -5,7 +5,7 @@ const about = () => {
   return (
     <div>
       <Layout>
-        <div className="mt-6 mb-16">
+        <div className="mt-6  h-screen">
           <main
             className="prose mb-4 prose-xl prose-slate prose-h1:text-xl md:prose-h1:text-3xl
         prose-h1:font-black prose-h2:text-xl md:prose-h2:text-2xl prose-h2:font-extrabold
